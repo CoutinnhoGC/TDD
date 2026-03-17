@@ -1,7 +1,10 @@
 package org.example;
 
 public class VendaService {
-    public double calcularPreco(double v, boolean b) {
-        return 0;
+    public double calcularPreco(double valor, boolean isVip) {
+        if (isVip) {
+            return valor * 0.80;
+        }
+        return valor * 0.90;
     }
 }

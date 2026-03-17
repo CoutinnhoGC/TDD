@@ -6,7 +6,11 @@ public class LoginService {
         return false;
     }
 
-    public boolean validarEmail(String mail) {
-        return false;
+    public boolean validarEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return false;
+        }
+
+        return email.contains("@") && email.contains(".");
     }
 }
